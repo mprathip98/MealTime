@@ -1,0 +1,21 @@
+
+def main():
+    answer = input("Enter Time: ")
+
+    time = convert(answer)
+    if 8 >= time >= 7:
+        print("breakfast time")
+    elif 13 >= time >= 12:
+        print("lunch time")
+    elif 19 >= time >= 18:
+        print("dinner time")
+
+def convert(time):
+    hours, mintues = time.split(":")
+    minutesNew = float(mintues)/60
+    return float(hours)+minutesNew
+
+
+
+if __name__ == "__main__":
+    main()
